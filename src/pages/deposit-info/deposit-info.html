@@ -1,0 +1,73 @@
+<!--
+  Generated template for the DepositInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title>Transaksi Dalam Proses</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3 text-center><b>LAKUKAN PEMBAYARAN</b> </h3>         
+    
+        <p *ngIf="time" class="waktu" text-center>
+            Berakhir( {{time}} )
+        </p>
+        <p *ngIf="!time" class="waktu" text-center>
+          &nbsp;
+        </p>
+
+         <p class="info" text-center> Mohon tambahkan 547 pada jumlah pembayaran. Angka acak ini akan berguna untuk alokasi pembayaran yang lebih cepat
+          . Angka ini bukanlah biaya, Anda akan tetap menerima jumlah transfer yang sama pada saldo.
+          </p>
+          <br>
+    
+          <div class="box" text-center >
+              Lakukan pembayaran tepat dengan jumlah: <br>
+             <span class="nilai">IDR 50547</span> 
+          </div>
+            <ion-grid no-padding >
+              <ion-row class="list">
+                <ion-col text-left>Nama</ion-col>
+                <ion-col text-right>PT.TAPME PAY</ion-col>
+              </ion-row>
+              <ion-row class="list">
+                <ion-col text-left>Bank</ion-col>
+                <ion-col text-right>BCA</ion-col>
+              </ion-row>
+              <ion-row class="list">
+                <ion-col text-left>Nomor rekening</ion-col>
+                <ion-col text-right>1115454875</ion-col>
+              </ion-row>
+              <ion-row class="list">
+                <ion-col text-left>Jumlah</ion-col>
+                <ion-col text-right>IDR 50547</ion-col>
+              </ion-row>
+            </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col col-7>
+            <button  ion-button  block color="original"  (click)="back()">
+                Kembali
+            </button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>

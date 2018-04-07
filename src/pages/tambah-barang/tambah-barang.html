@@ -1,0 +1,72 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title *ngIf="!ubah">Tambah item baru</ion-title>
+    <ion-title *ngIf="ubah">Ubah Item</ion-title>
+    <!-- <ion-buttons end>
+        <button ion-button icon-only (click)="simpan()">   
+          <ion-icon name="md-checkmark" *ngIf="!proses"></ion-icon> 
+          <ion-spinner class="loading" name="bubbles" *ngIf="proses"></ion-spinner>
+        </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-list>
+        <div class="splash-info">
+        <div (click)="gantiFoto()" class="splash-logo" >
+            <img class="img-profile"  src="assets/imgs/nasgor.jpg">
+            <div class="splash-intro">
+                Ganti Foto
+            </div>
+        </div>
+        
+      </div>
+  
+        <ion-item>
+            <ion-label color="label" stacked>Kode Item</ion-label>
+            <ion-input type="text" [(ngModel)]="kodeitem" placeholder="kode item"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Nama item</ion-label>
+            <ion-input type="text" [(ngModel)]="namaitem" placeholder="nama item"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Satuan</ion-label>
+            <ion-input type="text" [(ngModel)]="satuan" placeholder="satuan"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Harga Per Satuan</ion-label>
+            <ion-input type="number" [(ngModel)]="harga" placeholder="IDR"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Diskon (Opsi)</ion-label>
+            <ion-input type="email" [(ngModel)]="discount" placeholder="Disc"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Pajak (Opsi)</ion-label>
+            <ion-input type="text" [(ngModel)]="ppn" placeholder="Pajak"></ion-input>
+        </ion-item>
+  
+    </ion-list>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col col-6>
+              <ion-spinner class="loading" name="bubbles" *ngIf="loading" ></ion-spinner>
+              <button *ngIf="!ubah" [disabled]="valid" ion-button  block color="original"  (click)="simpan()">
+                  Simpan
+              </button>
+              <button *ngIf="ubah" [disabled]="valid" ion-button  block color="original"  (click)="simpanperubahan()">
+                Simpan Perubahan
+              </button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar color="original">
+      <ion-title>PIN</ion-title>
+      <ion-buttons end>
+          <button (click)="dismiss()"  ion-button icon-only>
+            <ion-icon name="close"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content >
+    <br>
+    <br>
+    <div class="box">
+        <div class="form-input">
+          <input  [(ngModel)]="kodeV"  type="password" maxlength="6" required>
+          <ion-icon class="ico" name="ios-information-circle-outline"></ion-icon>
+          <label class="label-inputan">Masukan PIN Anda</label>
+          <span class="bar"></span>
+        </div>
+    </div>
+    <br>
+    <div padding>
+      <button ion-button block color="original" (click)="showConfirm()">Lanjutkan</button>
+    </div>
+  
+  </ion-content>
+  

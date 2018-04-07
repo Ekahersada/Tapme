@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title>Daftar Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-fab top right edge>
+        <button ion-fab mini (click)="tambahbarang()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <ion-list>
+      <div>
+        <button ion-item (press)="press($event)" (click)="pilihItem()" *ngFor="let index of [0,1,2,3,4,5,6,7,8]">
+          <ion-avatar item-start>
+              <img class="img-item" src="assets/imgs/nasgor.jpg">
+          </ion-avatar>
+          <p>NSG01</p>
+          <h2><b>Nasi Goreng</b></h2>
+          <p>Porsi</p>
+          <p item-right>IDR 10.000</p>
+        </button>
+      </div>
+    </ion-list>
+
+</ion-content>

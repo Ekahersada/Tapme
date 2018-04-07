@@ -1,0 +1,46 @@
+
+
+    
+
+
+<ion-content >
+  <!-- <span class="head" (click)="gotoEditAkun()">
+    <ion-icon name="md-settings" ></ion-icon>
+  </span> -->
+  <div class="background">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+            <img class="img-item" src="assets/imgs/profile-pic.jpg">
+        </ion-col>
+        <ion-col>
+         <span class="nama"> Eka Hersada </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+  <ion-list>
+    <button ion-item (click)="gotoProfil()">
+      Profil
+    </button>
+    <button ion-item (click)="gotoItem()">
+      Daftar Item
+    </button>
+    <button ion-item (click)="gotoPoin()">
+      Tukar Poin
+      <div item-end detail-push>
+        1000
+      </div>
+    </button>
+    <button ion-item (click)="gotoGantiPin()">
+       Ganti PIN
+    </button>
+    <button ion-item (click)="gotoBantuan()">
+        Bantuan
+    </button>
+    <button ion-item (click)="keluar()">
+        Keluar
+    </button >
+  </ion-list>
+</ion-content>
